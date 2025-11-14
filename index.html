@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nikhil Maheswaran | Full-Stack Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f1f5f9;
+            color: #1e293b;
+        }
+
+        .nav-link.active {
+            color: #4f46e5;
+            font-weight: 600;
+        }
+
+        .gradient-text {
+            background-image: linear-gradient(to right, #818cf8, #6366f1);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #e2e8f0;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4f46e5;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #6366f1;
+        }
+
+        .page {
+            display: none;
+        }
+        .page.active {
+            display: block;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col">
+
+    <header class="sticky top-0 z-50 bg-slate-100/80 backdrop-blur-md border-b border-slate-300">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
+            <div class="logo">
+                <a href="#home" class="nav-link text-xl font-bold gradient-text">Nikhil.dev</a>
+            </div>
+
+            <div class="space-x-4 hidden md:flex">
+                <a href="#home" class="nav-link active group flex items-center gap-1 px-3 py-2 rounded-md text-slate-700 hover:text-indigo-600 transition-colors">Home</a>
+                <a href="#about" class="nav-link group flex items-center gap-1 px-3 py-2 rounded-md text-slate-700 hover:text-indigo-600 transition-colors">About & Skills</a>
+                <a href="#education" class="nav-link group flex items-center gap-1 px-3 py-2 rounded-md text-slate-700 hover:text-indigo-600 transition-colors">Education</a>
+                <a href="#projects" class="nav-link group flex items-center gap-1 px-3 py-2 rounded-md text-slate-700 hover:text-indigo-600 transition-colors">Projects</a>
+                <a href="#contact" class="nav-link group flex items-center gap-1 px-3 py-2 rounded-md text-slate-700 hover:text-indigo-600 transition-colors">Contact</a>
+            </div>
+
+            <div class="md:hidden">
+                <button id="mobile-menu-btn" class="text-slate-700 text-2xl focus:outline-none" aria-label="Open menu">
+                    &#9776;
+                </button>
+            </div>
+        </nav>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-100 border-t border-slate-300">
+            <div class="px-4 py-3 space-y-2">
+                <a href="#home" class="nav-link block px-3 py-2 rounded-md text-slate-700 hover:text-indigo-600">Home</a>
+                <a href="#about" class="nav-link block px-3 py-2 rounded-md text-slate-700 hover:text-indigo-600">About & Skills</a>
+                <a href="#education" class="nav-link block px-3 py-2 rounded-md text-slate-700 hover:text-indigo-600">Education</a>
+                <a href="#projects" class="nav-link block px-3 py-2 rounded-md text-slate-700 hover:text-indigo-600">Projects</a>
+                <a href="#contact" class="nav-link block px-3 py-2 rounded-md text-slate-700 hover:text-indigo-600">Contact</a>
+            </div>
+        </div>
+        </header>
+
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-12 flex-grow">
+
+        <section id="page-home" class="page active">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-12 min-h-[60vh]">
+                <div class="hero-text text-center md:text-left md:w-2/3">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4">
+                        Hi, I'm <strong class="gradient-text">Nikhil Maheswaran</strong>
+                    </h1>
+                    <p class="text-xl md:text-2xl text-slate-700 mb-8">
+                        I'm an adaptable and results-driven Computer Science Engineer passionate about full-stack development, problem-solving, and building scalable applications.
+                    </p>
+
+                    <a href="#about" class="nav-link bg-indigo-600 text-white font-semibold px-8 py-3 rounded-full text-lg shadow-lg shadow-indigo-600/30 hover:bg-indigo-700 transition-all transform hover:scale-105">
+                        Let's Go
+                    </a>
+                </div>
+
+                <div class="hero-image md:w-1/3 flex justify-center">
+                    <img src="./nik1.jpg"
+                         onerror="this.src='https://placehold.co/300x300/6366f1/e0e7ff?text=NM'"
+                         alt="Nikhil Maheswaran"
+                         class="rounded-full w-60 h-60 md:w-80 md:h-80 object-cover border-8 border-slate-300 shadow-2xl">
+                </div>
+            </div>
+        </section>
+
+        <section id="page-about" class="page">
+            <h2 class="section-title text-3xl font-bold text-center mb-10 gradient-text">About Me</h2>
+
+            <div class="bg-white p-8 rounded-lg shadow-xl max-w-4xl mx-auto mb-12">
+                <p class="text-lg text-slate-700 text-center leading-relaxed">
+                    Adaptable and results-driven Computer Science graduate with a strong foundation in software engineering, programming, and technical troubleshooting. Skilled in developing scalable web and mobile applications, maintaining existing systems, and addressing client requirements with precision. Experienced in both independent and team-based environments, with a focus on delivering high-quality code, resolving bugs, and contributing to software enhancements.
+
+                </p>
+            </div>
+
+            <h2 class="section-title text-3xl font-bold text-center mb-10 gradient-text">Technical Skills</h2>
+
+            <div class="skills flex flex-wrap justify-center gap-3 md:gap-4 max-w-5xl mx-auto">
+                <span class="skill bg-indigo-100 text-indigo-700 font-medium px-5 py-2 rounded-full text-sm shadow-md">JavaScript</span>
+                <span class="skill bg-indigo-100 text-indigo-700 font-medium px-5 py-2 rounded-full text-sm shadow-md">Java</span>
+                <span class="skill bg-indigo-100 text-indigo-700 font-medium px-5 py-2 rounded-full text-sm shadow-md">HTML5</span>
+                <span class="skill bg-indigo-100 text-indigo-700 font-medium px-5 py-2 rounded-full text-sm shadow-md">CSS</span>
+                <span class="skill bg-indigo-100 text-indigo-700 font-medium px-5 py-2 rounded-full text-sm shadow-md">Dart</span>
+                <span class="skill bg-indigo-100 text-indigo-700 font-medium px-5 py-2 rounded-full text-sm shadow-md">Python</span>
+                <span class="skill bg-indigo-100 text-indigo-700 font-medium px-5 py-2 rounded-full text-sm shadow-md">React JS</span>
+                <span class="skill bg-indigo-100 text-indigo-700 font-medium px-5 py-2 rounded-full text-sm shadow-md">Node JS</span>
+                <span class="skill bg-indigo-100 text-indigo-700 font-medium px-5 py-2 rounded-full text-sm shadow-md">Express JS</span>
+                <span class="skill bg-indigo-100 text-indigo-700 font-medium px-5 py-2 rounded-full text-sm shadow-md">MongoDB</span>
+                <span class="skill bg-indigo-100 text-indigo-700 font-medium px-5 py-2 rounded-full text-sm shadow-md">REST API</span>
+                <span class="skill bg-indigo-100 text-indigo-700 font-medium px-5 py-2 rounded-full text-sm shadow-md">EJS</span>
+                <span class="skill bg-indigo-100 text-indigo-700 font-medium px-5 py-2 rounded-full text-sm shadow-md">Mongoose ODM</span>
+                <span class="skill bg-indigo-100 text-indigo-700 font-medium px-5 py-2 rounded-full text-sm shadow-md">Bootstrap</span>
+            </div>
+
+            <h2 class="section-title text-3xl font-bold text-center mt-12 mb-10 gradient-text">Soft Skills</h2>
+
+            <div class="skills flex flex-wrap justify-center gap-3 md:gap-4 max-w-5xl mx-auto">
+                <span class="skill bg-indigo-100 text-indigo-700 font-medium px-5 py-2 rounded-full text-sm shadow-md">Analytical Thinking</span>
+                <span class="skill bg-indigo-100 text-indigo-700 font-medium px-5 py-2 rounded-full text-sm shadow-md">Communication</span>
+                <span class="skill bg-indigo-100 text-indigo-700 font-medium px-5 py-2 rounded-full text-sm shadow-md">Adaptability</span>
+            </div>
+
+            <h2 class="section-title text-3xl font-bold text-center mt-12 mb-10 gradient-text">Hobbies and Interests</h2>
+
+            <div class="skills flex flex-wrap justify-center gap-3 md:gap-4 max-w-5xl mx-auto">
+                <span class="skill bg-indigo-100 text-indigo-700 font-medium px-5 py-2 rounded-full text-sm shadow-md">Performing Close-up Magic Tricks</span>
+                <span class="skill bg-indigo-100 text-indigo-700 font-medium px-5 py-2 rounded-full text-sm shadow-md">Psychological Illusionist</span>
+                <span class="skill bg-indigo-100 text-indigo-700 font-medium px-5 py-2 rounded-full text-sm shadow-md">Video Editing</span>
+            </div>
+        </section>
+
+        <section id="page-education" class="page">
+            <h2 class="section-title text-3xl font-bold text-center mb-10 gradient-text">Education & Certifications</h2>
+
+            <div class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-xl mb-12">
+                <h3 class="text-2xl font-semibold mb-6 text-indigo-600">Academic Background</h3>
+
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left">
+                        <thead class="border-b border-slate-300">
+                            <tr>
+                                <th class="py-3 pr-3">Degree</th>
+                                <th class="py-3 pr-3">Institution</th>
+                                <th class="py-3 pr-3">Year</th>
+                                <th class="py-3 pr-3">CGPA/Percentage</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr class="border-b border-slate-300">
+                                <td class="py-4 pr-3 font-medium">B.E. Computer Science</td>
+                                <td class="py-4 pr-3">Anna University Regional Campus, Coimbatore</td>
+                                <td class="py-4 pr-3">2022 - 2025</td>
+                                <td class="py-4 pr-3">7.54 CGPA</td>
+                            </tr>
+
+                            <tr class="border-b border-slate-300">
+                                <td class="py-4 pr-3 font-medium">Diploma: Computer Engineering</td>
+                                <td class="py-4 pr-3">Muthayammal Polytechnic College, Rasipuram</td>
+                                <td class="py-4 pr-3">2019 - 2022</td>
+                                <td class="py-4 pr-3">95%</td>
+                            </tr>
+
+                            <tr>
+                                <td class="py-4 pr-3 font-medium">SSLC</td>
+                                <td class="py-4 pr-3">SRK Matriculation Hr. Sec. School, Salem</td>
+                                <td class="py-4 pr-3">2018 - 2019</td>
+                                <td class="py-4 pr-3">60%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-xl mb-12">
+                <h3 class="text-2xl font-semibold mb-6 text-indigo-600">Internship Certifications & Courses</h3>
+
+                <ul class="list-disc list-inside space-y-4 text-slate-700">
+                    <li>
+                        <strong>MERN Stack Developer Internship & Course</strong> – Bluekode Solutions, Coimbatore (2025)
+                        <ul class="list-['-_'] list-inside ml-5 mt-1 text-slate-600">
+                            <li>Learned full-stack development using MongoDB, Express.js, React, and Node.js.</li>
+                            <li>Completed hands-on projects with CRUD, REST APIs, Authentication, Deployment.</li>
+                        </ul>
+                    </li>
+
+                    <li><strong>Python</strong> – Guvi</li>
+                    <li><strong>HTML and CSS</strong> – Udemy</li>
+                </ul>
+            </div>
+
+            <div class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-xl">
+                <h3 class="text-2xl font-semibold mb-6 text-indigo-600">Accomplishments</h3>
+
+                <ul class="list-disc list-inside space-y-3 text-slate-700">
+                    <li>Top rank holder in Diploma Examination with 95%</li>
+                    <li>Performed 50+ Magic shows in colleges and public events</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="page-projects" class="page">
+            <h2 class="section-title text-3xl font-bold text-center mb-10 gradient-text">Projects</h2>
+
+            <div class="projects grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <div class="project-card cursor-pointer bg-white rounded-lg p-6 shadow-lg hover:shadow-xl hover:border-indigo-500 border-2 border-transparent transition-all transform hover:-translate-y-1"
+                     data-project-id="job-detect">
+
+                    <h3 class="text-xl font-semibold text-indigo-600 mb-2">Fake Job Detection (ML)</h3>
+                    <p class="text-slate-600 text-sm mb-4">
+                        Developed a system to detect fraudulent job postings using NLP and classification models...
+                    </p>
+
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full">Python</span>
+                        <span class="text-xs bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full">NLP</span>
+                        <span class="text-xs bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full">Machine Learning</span>
+                    </div>
+
+                    <span class="text-indigo-600 font-medium hover:text-indigo-500">View Details →</span>
+                </div>
+
+                <div class="project-card cursor-pointer bg-white rounded-lg p-6 shadow-lg hover:shadow-xl hover:border-indigo-500 border-2 border-transparent transition-all transform hover:-translate-y-1"
+                     data-project-id="tap-game">
+
+                    <h3 class="text-xl font-semibold text-indigo-600 mb-2">Two-Player Tap-Based Game</h3>
+                    <p class="text-slate-600 text-sm mb-4">
+                        Interactive two-player tap-based game using Flutter with real-time score tracking...
+                    </p>
+
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full">Flutter</span>
+                        <span class="text-xs bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full">Dart</span>
+                        <span class="text-xs bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full">Mobile App</span>
+                    </div>
+
+                    <span class="text-indigo-600 font-medium hover:text-indigo-500">View Details →</span>
+                </div>
+
+                <div class="project-card cursor-pointer bg-white rounded-lg p-6 shadow-lg hover:shadow-xl hover:border-indigo-500 border-2 border-transparent transition-all transform hover:-translate-y-1"
+                     data-project-id="bookvault">
+
+                    <h3 class="text-xl font-semibold text-indigo-600 mb-2">BookVault</h3>
+                    <p class="text-slate-600 text-sm mb-4">
+                        Responsive web app for managing books dynamically...
+                    </p>
+
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full">HTML</span>
+                        <span class="text-xs bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full">CSS</span>
+                        <span class="text-xs bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full">JavaScript</span>
+                    </div>
+
+                    <span class="text-indigo-600 font-medium hover:text-indigo-500">View Details →</span>
+                </div>
+
+                <div class="project-card cursor-pointer bg-white rounded-lg p-6 shadow-lg hover:shadow-xl hover:border-indigo-500 border-2 border-transparent transition-all transform hover:-translate-y-1"
+                     data-project-id="weather-app">
+
+                    <h3 class="text-xl font-semibold text-indigo-600 mb-2">Weather App</h3>
+                    <p class="text-slate-600 text-sm mb-4">
+                        Built using OpenWeather API with dynamic backgrounds and live updates...
+                    </p>
+
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full">JavaScript</span>
+                        <span class="text-xs bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full">REST API</span>
+                        <span class="text-xs bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full">HTML/CSS</span>
+                    </div>
+
+                    <span class="text-indigo-600 font-medium hover:text-indigo-500">View Details →</span>
+                </div>
+
+                <div class="project-card cursor-pointer bg-white rounded-lg p-6 shadow-lg hover:shadow-xl hover:border-indigo-500 border-2 border-transparent transition-all transform hover:-translate-y-1"
+                     data-project-id="kfc-clone">
+
+                    <h3 class="text-xl font-semibold text-indigo-600 mb-2">Full-Stack KFC Clone (MERN)</h3>
+                    <p class="text-slate-600 text-sm mb-4">
+                        MERN stack KFC replica with menus, deals, and functional cart...
+                    </p>
+
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full">React</span>
+                        <span class="text-xs bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full">Node.js</span>
+                        <span class="text-xs bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full">MongoDB</span>
+                        <span class="text-xs bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full">MERN Stack</span>
+                    </div>
+
+                    <span class="text-indigo-600 font-medium hover:text-indigo-500">View Details →</span>
+                </div>
+
+            </div>
+        </section>
+        <section id="page-contact" class="page">
+            <h2 class="section-title text-3xl font-bold text-center mb-10 gradient-text">Let's Connect</h2>
+
+            <div class="max-w-2xl mx-auto text-center bg-white p-8 md:p-12 rounded-lg shadow-xl">
+                <p class="text-lg text-slate-700 mb-8">
+                    I'm currently seeking new opportunities and open to collaborations. Feel free to reach out!
+                </p>
+
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="mailto:nikhilmahesh54@gmail.com"
+                       class="bg-indigo-600 text-white font-medium px-6 py-3 rounded-full flex items-center justify-center gap-2 hover:bg-indigo-700 transition-colors transform hover:scale-105">
+                        ✉ Email
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/nikhil-maheswaran-565904283"
+                       target="_blank"
+                       class="bg-slate-200 text-slate-800 font-medium px-6 py-3 rounded-full flex items-center justify-center gap-2 hover:bg-slate-300 transition-colors transform hover:scale-105">
+                       <i class="bi bi-linkedin"></i>
+                       LinkedIn
+                    </a>
+
+
+                    <a href="https://github.com/NikhilMaheswaran"
+                       target="_blank"
+                       class="bg-slate-200 text-slate-800 font-medium px-6 py-3 rounded-full flex items-center justify-center gap-2 hover:bg-slate-300 transition-colors transform hover:scale-105">
+                       <i class="bi bi-github"></i>
+                       GitHub
+                    </a>
+
+                    <a href="https://www.instagram.com/magician_nikhilmaheswaran?igsh=MWh4Y3A0YnhsMnR2OA=="
+                       target="_blank"
+                       class="bg-slate-200 text-slate-800 font-medium px-6 py-3 rounded-full flex items-center justify-center gap-2 hover:bg-slate-300 transition-colors transform hover:scale-105">
+                       <i class="bi bi-instagram"></i>
+                       Instagram
+                    </a>
+
+
+                </div>
+
+                <div class="mt-8 text-slate-600">
+                    <p>📞 +91 6381782520</p>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="page-project-detail" class="page">
+
+            <button id="back-to-projects" class="mb-8 inline-flex items-center gap-2 text-indigo-600 hover:text-indigo-500 transition-colors">
+                ← Back to Projects
+            </button>
+
+            <div class="bg-white p-8 md:p-12 rounded-lg shadow-xl max-w-4xl mx-auto">
+
+                <h2 id="detail-title" class="text-3xl font-bold mb-4 gradient-text">[Project Title]</h2>
+
+                <div id="detail-tags" class="flex flex-wrap gap-2 mb-6"></div>
+
+                <p id="detail-description" class="text-lg leading-relaxed text-slate-700"></p>
+
+                <h3 class="text-xl font-semibold text-indigo-600 pt-6">Features</h3>
+                <ul id="detail-features" class="list-disc list-outside ml-5 space-y-2"></ul>
+
+                <h3 class="text-xl font-semibold text-indigo-600 pt-6">Challenges & Learning</h3>
+                <p id="detail-challenges" class="text-slate-700"></p>
+                
+                <h3 class="text-xl font-semibold text-indigo-600 pt-6">Project Screenshots</h3>
+                <div id="detail-images" class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4"></div>
+                <div id="detail-links" class="flex flex-wrap gap-4 mt-8"></div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="text-center py-6 border-t border-slate-300">
+        <p class="text-slate-500">© 2025 Nikhil Maheswaran | Built with ❤️ & Tailwind CSS</p>
+    </footer>
+
+    <script>
+        const projectDetails = {
+            "job-detect": {
+                title: "Fake Job Detection (ML)",
+                tags: ["Python", "NLP", "Scikit-learn", "Web Scraping", "Flask"],
+                description: "Built a Machine Learning system to detect fraudulent job postings using NLP and classification models.",
+                features: [
+                    "🤖 Developed a machine learning-based system to detect fraudulent job postings using NLP and classification models.",
+                    "🕵️ Implemented a web scraping module to analyze job listings from platforms like LinkedIn.",
+                    "🌐 Built a user-friendly web interface where users can input job details or URLs for analysis.",
+                    "📊 Designed rule-based feature extraction and an educational feedback system to explain potential scam indicators.",
+                    "🎯 Achieved model accuracy above 85% and integrated user feedback for continuous improvement."
+                ],
+                challenges: "Dealing with imbalanced dataset. Used SMOTE, cleaned unstructured data.",
+                links: [{ name: "GitHub Repo", url: "https://shorturl.at/ReVgV" }],
+
+                /* ⭐ ADDED IMAGES ⭐ */
+                images: [
+                    "./fakejob1.jpeg",
+                    "./fakejob2.jpeg",
+                    "./fakejob3.jpeg",
+                    "./fakejob4.jpeg"
+                ]
+            },
+
+            "tap-game": {
+                title: "Two-Player Tap-Based Game (Flutter)",
+                tags: ["Flutter", "Dart", "Mobile App", "Firebase"],
+                description: "A fast-paced tap game for two players on one device.",
+                features: [
+                    "🎮 Developed a two-player tap-based game using Flutter for interactive and competitive gameplay.",
+                    "📱 Designed a responsive UI with smooth animations and real-time score tracking.",
+                    "⚡ Implemented event handling and game logic to ensure fairness and performance."
+                ],
+                challenges: "State management was the biggest challenge; learned Provider & widget architecture.",
+                links: [{ name: "GitHub Repo", url: "https://shorturl.at/3bFRy" }],
+
+                /* ⭐ IMAGES ⭐ */
+                images: [
+                    "./game1.jpeg",
+                    "./game2.jpeg",
+                    "./game3.jpeg"
+                ]
+            },
+
+            "bookvault": {
+                title: "BookVault (HTML, CSS, JS)",
+                tags: ["HTML", "CSS", "JavaScript", "DOM"],
+                description: "Dynamic book management app.",
+                features: [
+                    "➕ Add books.",
+                    "❌ Delete books.",
+                    "🔁 Toggle read status.",
+                    "📱 Responsive layout.",
+                    "📂 Clean, dynamic UI updates through DOM."
+                ],
+                challenges: "Pure JS state management taught DOM manipulation deeply.",
+                links: [{ name: "GitHub Repo", url: "https://shorturl.at/Pit6L" }],
+
+                /* ⭐ IMAGES ⭐ */
+                images: ["./bookvault.png"]
+            },
+
+            "weather-app": {
+                title: "Weather App (API Based)",
+                tags: ["JavaScript", "REST API", "HTML/CSS", "Async/Await"],
+                description: "Live weather forecasting app with dynamic UI.",
+                features: [
+                    "🌦️ Developed a weather forecasting web app using HTML, CSS, and JavaScript.",
+                    "🔗 Integrated OpenWeather API to fetch real-time weather data based on city input.",
+                    "🖥️ Implemented dynamic UI updates (temperature, humidity, wind speed, weather icons) using DOM manipulation.",
+                    " 🌄 Added interactive background images that change dynamically according to weather conditions.",
+                    "🎨 Improved user experience with error handling, custom alerts, and responsive design.",
+                    "📐 Ensured clean UI with flexbox-based layout and optimized styling.",
+                    "✅ Tested app across multiple cities to verify accuracy and reliability of data."
+                ],
+                challenges: "Learned async JS, fetch(), and API parsing.",
+                links: [{ name: "GitHub Repo", url: "https://shorturl.at/4zK3n" }],
+
+                /* ⭐ IMAGES ⭐ */
+                images: ["./weather.png"]
+            },
+
+            "kfc-clone": {
+                title: "Full-Stack KFC Clone (MERN Stack) 🔥",
+                tags: ["React", "Node.js", "Express.js", "MongoDB", "Mongoose", "REST API"],
+                description: "A full KFC website clone using MERN stack.",
+                features: [
+                    "💻 Developed a multi-page web application replicating the KFC website experience.",
+                    "✨ The frontend is powered by React and React Router, allowing users to seamlessly.",
+                    "🍔 Browse dynamic menus.",
+                    "🛒 Add items to a fully functional shopping cart.",
+                    "⚙️ On the backend, I built a custom REST API using Express.js and Node.js.",
+                    "✅ Sent to the backend.",
+                    "✅ Validated and saved in MongoDB.",
+                    "✅ Accessible via MongoDB Compass for easy data viewing.",
+                ],
+                challenges: "Ensuring smooth data flow between React → Express → MongoDB.",
+                links: [
+                    { name: "GitHub Repo", url: "https://github.com/NikhilMaheswaran/KFC-clone-website" }
+                ],
+
+                /* ⭐ IMAGES ⭐ */
+                images: [
+                    "./kfc1.png",
+                    "./kfc2.png",
+                    "./kfc3.png",
+                    "./kfc4.png",
+                    "./kfc5.png"
+                ]
+            }
+        };
+
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const navLinks = document.querySelectorAll(".nav-link");
+            const pages = document.querySelectorAll(".page");
+            const projectCards = document.querySelectorAll(".project-card");
+            const detailPage = document.getElementById("page-project-detail");
+            const backBtn = document.getElementById("back-to-projects");
+
+            /* ⭐ NEW: ADDED FOR MOBILE MENU ⭐ */
+            const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+            const mobileMenu = document.getElementById("mobile-menu");
+
+            // Toggle menu on button click
+            mobileMenuBtn.addEventListener("click", () => {
+                mobileMenu.classList.toggle("hidden");
+            });
+            /* ⭐ END NEW CODE ⭐ */
+
+
+            function showPage(pageId) {
+                const id = pageId.replace("#", "page-");
+                pages.forEach(p => p.classList.remove("active"));
+                document.getElementById(id).classList.add("active");
+
+                navLinks.forEach(link => {
+                    link.classList.toggle("active", link.getAttribute("href") === pageId);
+                });
+
+                window.scrollTo(0, 0);
+            }
+
+            navLinks.forEach(link => {
+                link.addEventListener("click", e => {
+                    const target = link.getAttribute("href");
+                    if (target.startsWith("#")) {
+                        e.preventDefault();
+                        showPage(target);
+                        window.location.hash = target;
+
+                        /* ⭐ NEW: Close mobile menu on link click ⭐ */
+                        mobileMenu.classList.add("hidden");
+                        /* ⭐ END NEW CODE ⭐ */
+                    }
+                });
+            });
+
+            function loadProject(id) {
+                const p = projectDetails[id];
+
+                document.getElementById("detail-title").textContent = p.title;
+                document.getElementById("detail-description").textContent = p.description;
+                document.getElementById("detail-challenges").textContent = p.challenges;
+
+                const tags = document.getElementById("detail-tags");
+                tags.innerHTML = "";
+                p.tags.forEach(t => {
+                    const el = document.createElement("span");
+                    el.className = "text-xs bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full";
+                    el.textContent = t;
+                    tags.appendChild(el);
+                });
+
+                const feat = document.getElementById("detail-features");
+                feat.innerHTML = "";
+                p.features.forEach(f => {
+                    const li = document.createElement("li");
+                    li.textContent = f;
+                    feat.appendChild(li);
+                });
+
+                const links = document.getElementById("detail-links");
+                links.innerHTML = "";
+                p.links.forEach(l => {
+                    const a = document.createElement("a");
+                    a.href = l.url;
+                    a.target = "_blank";
+                    a.className =
+                        "bg-indigo-600 text-white font-medium px-6 py-3 rounded-full hover:bg-indigo-700 transition-colors transform hover:scale-105";
+                    a.textContent = l.name;
+                    links.appendChild(a);
+                });
+
+                /* ⭐ LOAD SCREENSHOTS ⭐ */
+                const imgBox = document.getElementById("detail-images");
+                imgBox.innerHTML = "";
+                if (p.images) {
+                    p.images.forEach(src => {
+                        const img = document.createElement("img");
+                        img.src = src;
+                        img.className = "rounded-lg shadow-md w-full object-cover";
+                        imgBox.appendChild(img);
+                    });
+                }
+                /* ⭐ END ⭐ */
+
+                pages.forEach(p => p.classList.remove("active"));
+                detailPage.classList.add("active");
+                window.scrollTo(0, 0);
+            }
+
+            projectCards.forEach(card => {
+                card.addEventListener("click", () => loadProject(card.dataset.projectId));
+            });
+
+            backBtn.addEventListener("click", () => showPage("#projects"));
+
+            showPage(window.location.hash || "#home");
+        });
+    </script>
+
+</body>
+</html>
